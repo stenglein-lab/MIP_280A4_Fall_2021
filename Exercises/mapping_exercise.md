@@ -3,6 +3,31 @@
 MIP 280A4
 ---
 
+## First: Install conda environment with tools needed for remaining in-class exercises
+
+Installing bioinformatics software can be challenging.  Conda is a tool that facilitate installing software and making sure the installed software will work together.  
+
+You will create a new conda environment that includes the tools you'll need for the remainder of this course on the thoth01 server.  The tools are listed in [this file]().
+
+Login to the thoth01 server:
+```
+ssh your_eid@thoth01.cvmbs.colostate.edu
+```
+
+Create a new conda environment named bio_tools by running this command
+```
+conda env create --prefix $HOME/bio_tools --file /home/mdstengl/mip_280_conda.yaml
+```
+
+To activate this environment, you will need to run:
+```
+conda activate $HOME/bio_tools
+```
+
+**You will need to activate this environment every time you want to use these tools.**
+
+
+
 ## In this exercise, we will learn how to create an index from a reference sequence, then map reads to that reference sequence
 
 ### [Last time] Downloading an SRA dataset
