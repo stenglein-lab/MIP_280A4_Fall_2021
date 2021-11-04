@@ -7,7 +7,7 @@ MIP 280A4
 
 Installing bioinformatics software can be challenging.  Conda is a tool that facilitate installing software and making sure the installed software will work together.  
 
-You will create a new conda environment that includes the tools you'll need for the remainder of this course on the thoth01 server.  The tools are listed in [this file]().
+You will create a new conda environment that includes the tools you'll need for the remainder of this course on the thoth01 server.  The tools are listed in [this file](https://github.com/stenglein-lab/MIP_280A4_Fall_2021/blob/main/conda_environment/mip_280_conda.yaml).
 
 Login to the thoth01 server:
 ```
