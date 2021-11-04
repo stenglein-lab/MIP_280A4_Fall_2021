@@ -198,16 +198,14 @@ Once you have the boa constrictor mitochondrial genome in a folder in Geneious, 
   - Try playing with the visualization settings in the panels on the right of the alignment
 
 - Some questions to consider when viewing the alignment:
-  - Is the coverage even across the mitochondrial genome?  
-  - What is the average coverage across the mitochondrial genome?
-  - This is essentially RNA-Seq data.  Are the mitochondrial genes expressed evenly?  
-  - How does this relate to coverage?
-  - Are there any variants between this snake's mitochondrial genome sequence and the boa constrictor reference sequence?  
-  - Is it expected that there are variants?
+  - What is the average coverage depth across the mitochondrial genome?
+  - Is the coverage even across the mitochondrial genome?
+  - Would you expect coverage to be even across the genome?  (Recall that this data is derived from total RNA from liver tissue). 
+  - Are the mitochondrial genes expressed evenly?
+  - Are there any variants between this snake's mitochondrial genome sequence and the boa constrictor reference sequence?
+  - Is it expected that there are variants between these reads and this reference sequence?  Explain your answer.
   - Can you distinguish true variants from sequencing errors?
-  - How can you distinguish true variants from sequencing errors?
-  - Is it possible that reads that derive from the boa constrictor nuclear genome are mapping to this sequence?  
+  - In general, how can you distinguish true variants from sequencing errors?
+  - Is it possible that reads that derive from the boa constrictor nuclear genome are mapping to this sequence?
   - How would you prevent nuclear reads from mapping to the mitochondrial genome?
-  - Can you identify mapped read pairs?  
-
-
+  - Can you identify mapped read pairs?
