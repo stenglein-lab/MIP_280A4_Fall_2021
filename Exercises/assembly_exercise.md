@@ -1,9 +1,13 @@
-## Mapping and Assembly Exercise
+## Genome Assembly Exercise
 
 MIP 280A4
 ---
 
 ## We will continue the exercise we started in previous classes using reads from a shotgun sequencing library from total RNA from the liver of a boa constrictor with inclusion body disease.  
+
+
+![Python with IBD](IBD.png)
+
 
 ### De-novo assembly of non-mapping reads
 
@@ -14,6 +18,11 @@ There are a variety of de novo assemblers with different strengths and weaknesse
 The instructors have already downloaded an assembly of the boa constrictor genome from [here](http://gigadb.org/dataset/100060) and made a bowtie2 index, which can be found on thoth01 in /home/data_for_classes/2021_MIP_280A4.  We could have you make an index yourself, but that would take a long time for a Gb genome like the boa constrictor's.  The boa constrictor genome index is named boa_constrictor_bt_index.
 
 First, change to the directory in which you have your fastq files containing trimmed sequences.  Confirm you are in the right directory by running `ls`.  You should see the trimmed fastq files.
+
+Don't forget to activate the conda environment that contains the software you'll need:
+```
+conda activate $HOME/bio_tools
+```
 
 Now, we'll run bowtie2 to map reads to the _entire_ boa constrictor genome.  This time we'll run bowtie2 a little differently:
 1. We'll run bowtie2 in [local mode](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#end-to-end-alignment-versus-local-alignment), which is a more permissive mapping mode that doesn't require the ends of the reads to map
