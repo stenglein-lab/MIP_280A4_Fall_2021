@@ -7,9 +7,13 @@ MIP 280A4
 
 The data we'll use was generated from a pool of _Anopheles gambiae_ mosquitoes collected in Liberia.  The dataset contains reads mapping to a virus (Anopheles flavivirus).  We'll map the reads to the viral genome and use a variant caller to identify variants and determine their frequencies.
 
+An _Anopheles gambiae_ mosquito
+![Anopheles gambiae mosquito](./anopheles_gambiae.jpg)
+image credit: Jim Gathany, USCDCP, CC-O
+
 We will:
 
-- download the files we need
+- copy the files we need to a new working directory
 - make a bowtie index from the viral genome (reference) sequence
 - map reads to the reference sequence using bowtie2
 - use lofreq to call variants
@@ -99,11 +103,11 @@ less Pool_reads_aligned_to_viral_genome.vcf
 ```
 
 #### Questions about this variant calling output:
-- Does the VCF file make sense?  
-- How many variants were identified?
-- What are their allele frequencies?
-- Is linkage between variants described?
-- Are the variants SNPs, or InDels?  Would you expect to see InDel variants here?
+- How many variants were identified (how many variants are described in the vcf lofreq output file)? What bash command did you run to determine this?  
+- What is the allele frequency of the first described variant? 
+- Is linkage between variants described in the vcf file? 
+- Are the variants SNPs, or InDels?  Would you expect to see InDel variants here? 
+
 
 ### Time permitting: Visualize and inspect mapped data supporting called variants in Geneious
 
@@ -115,13 +119,12 @@ First, you need to get your reference sequence into Geneious, preferably with an
 
 
 #### Questions to consider about mapped reads in geneious:
-- Can you identify variants called in your VCF file?  (*Note:* numbering differs between the consensus sequence and the reference sequence in Geneious.  #s in the VCF file correspond to reference sequence positions).
-- Do variant frequencies match between Geneious and the VCF file?
-- Can you identify linked variants?  How far apart can you identify linked variants?
-- Are any of the variants non-synonymous (do they change the encoded amino acid)?
-- Are these intrahost or interhost variants? 
-- Can you identify any InDel variants that _should_ have been called that weren't? (Hint: look near the beginning of the reference sequence.)
-- We ran bowtie2 in end-to-end mode, which doesn't permit soft-trimming of read ends.  Can you identify any ends that should have been trimmed but weren't?  (I.e. that contain low quality basecalls at their ends?)
-
-
+- Can you identify individual variants called in your VCF file in Geneious?
+- Are variant frequencies generally similar between Geneious and the VCF file?  Report the variant frequency as reported by Geneious and in the VCF file for one variant (include its position in the genome too).  
+- Can you visually identify linked variants by looking at reads in Geneious?  How far apart do you think you can identify linked variants using this strategy?  
+- Would long read sequencing be a good alternative approach to identify linked variants? Why or why not?  
+- Are any of the variants non-synonymous (do they change the encoded amino acid)?  Provide an example of one such variant.
+- Are these intrahost or interhost variants?  Explain your answer.
+- Can you identify any InDel variants that _should_ have been called by lofreq that weren't called? (Hint: look near the beginning of the reference sequence). 
+- We ran bowtie2 in end-to-end mode, which doesn't permit soft-trimming of read ends.  It forces the entire read to align.  Can you identify any ends that should have been trimmed but weren't?  (I.e. that contain low quality basecalls at their ends?) 
 
